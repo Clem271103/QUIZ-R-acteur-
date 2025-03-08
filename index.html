@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Réacteurs Chimiques</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz sur les Réacteurs Chimiques BUT GCGP</h1>
+      
+<div id="sommaire">
+    <h2>Choisissez un niveau :</h2>
+
+    <div>
+        <strong>Débutant :</strong>
+        <p>Introduction aux réacteurs chimiques, Facteurs influençant une réaction, Types de réacteurs idéaux, Mélange et écoulement, Sécurité des procédés</p>
+        <button onclick="startQuiz('debutant')">Commencer</button>
+    </div>
+
+    <div>
+        <strong>Intermédiaire :</strong>
+        <p>Bilans matière et énergie, Cinétiques réactionnelles, Influence des conditions opératoires, Types d'écoulement, Optimisation des réacteurs</p>
+        <button onclick="startQuiz('intermediaire')">Commencer</button>
+    </div>
+
+    <div>
+        <strong>Avancé :</strong>
+        <p>Association de réacteurs, Réactions gaz-liquide et critère de Hatta, Limitation diffusionnelle, Effets thermiques et emballement, Calculs de conversion et temps de séjour</p>
+        <button onclick="startQuiz('avance')">Commencer</button>
+    </div>
+
+</div>
+        
+  <div id="quiz" class="hidden">
+    <h2 id="question"></h2>
+    <p id="timer">Temps : 0 s</p>
+    <ul id="answers"></ul>
+    <div id="explanation" class="hidden"></div>
+    <button onclick="nextQuestion()">Question Suivante</button>
+</div><!-- Explication après chaque question -->
+
+<div id="result" class="hidden">
+    <h2>Résultats du Quiz</h2>
+    <p id="score"></p>
+    <p id="temps"></p>
+    <div id="leaderboard"></div> <!-- Classement des meilleurs scores -->
+    <button onclick="rejouer()">Rejouer</button>
+</div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
